@@ -63,8 +63,6 @@ cd password-generator
 Run the script using Python:
 ```
 ```bash
-Copier
-Modifier
 python password-generator.py
 ```
 ## 🛠️ Dependencies
