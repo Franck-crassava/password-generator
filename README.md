@@ -2,23 +2,24 @@
 This script is a simple password generator that allows users to generate strong, customizable passwords based on their preferred settings. You can specify the length, and whether or not to include digits and special characters.
 
 ## 🔑 Features
-Generate passwords of customizable length.
-
-Optionally include digits and special characters.
-
-Print the password to the console and save it to a text file (generated_password.txt).
+- Generate customizable password length.
+- Optionally include digits and special characters.
+- Exclude specific characters from the password.
+- Use secure cryptographically strong password generation via the `secrets` module.
+- Option to generate multiple passwords at once.
 
 ## 🖥️ Usage
-You can run the script directly from the command line, specifying the following options:
+You can specify the following options:
+- `length` (integer): Password length (default: 12).
+- `use_digits` (boolean): Include digits (`true` or `false`; default: `true`).
+- `use_special` (boolean): Include special characters (`true` or `false`; default: `true`).
+- `exclude_chars` (string): Characters to exclude from the password (e.g., "0lI" to exclude `0`, `l`, and `I`).
+- `use_secure` (boolean): Use the secure `secrets` module for password generation (`true` or `false`; default: `true`).
+- `num_passwords` (integer): Generate multiple passwords at once (optional).
 
-Command Line Arguments
-length (integer): The desired length of the password (default: 12).
+## Command Line Arguments:
 
-use_digits (boolean): Whether to include digits in the password (true or false; default: true).
-
-use_special (boolean): Whether to include special characters in the password (true or false; default: true).
-
-## Examples
+### Examples
 Default (12 characters, with digits and special characters):
 
 ```bash
