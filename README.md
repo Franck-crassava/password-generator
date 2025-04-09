@@ -36,14 +36,16 @@ Default (12 characters, with digits and special characters):
 ```bash
 python password-generator.py
 Custom length (16 characters, with digits but no special characters):
-```
-```bash
+
 python password-generator.py 16 true false
 Custom length (8 characters, no digits and no special characters):
-```
-```bash
+
 python password-generator.py 8 false false
-💾 Output
+```
+
+## 💾 Output
+
+```bash
 Console: The generated password will be displayed in the terminal.
 
 File: The generated password will be saved in generated_password.txt.
@@ -55,18 +57,13 @@ Generate a single 12-character password:
 ```bash
 python password-generator.py
 Generate 5 passwords of length 20:
-```
 
-```bash
 python password-generator.py --length 20 --count 5
 Generate secure passwords and save them to a file:
-```
-```bash
+
 python password-generator.py --secure --count 3 --save passwords.txt
 Exclude confusing characters like O, 0, l, and 1:
-```
 
-```bash
 python password-generator.py --exclude "O0l1" --count 2
 ```
 
@@ -76,12 +73,10 @@ Clone this repository:
 ```bash
 git clone https://github.com/yourusername/password-generator.git
 Navigate to the project directory:
-```
-```bash
+
 cd password-generator
 Run the script using Python:
-```
-```bash
+
 python password-generator.py
 ```
 
