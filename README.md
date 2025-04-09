@@ -1,25 +1,36 @@
-# 📝 Password Generator
-This script is a simple password generator that allows users to generate strong, customizable passwords based on their preferred settings. You can specify the length, and whether or not to include digits and special characters.
+# 🔐 Password Generator
 
-## 🔑 Features
-- Generate customizable password length.
-- Optionally include digits and special characters.
-- Exclude specific characters from the password.
-- Use secure cryptographically strong password generation via the `secrets` module.
-- Option to generate multiple passwords at once.
+A flexible and customizable command-line password generator written in Python.  
+Perfect for creating strong passwords with options for security, character exclusions, saving to file, and more.
 
-## 🖥️ Usage
-You can specify the following options:
-- `length` (integer): Password length (default: 12).
-- `use_digits` (boolean): Include digits (`true` or `false`; default: `true`).
-- `use_special` (boolean): Include special characters (`true` or `false`; default: `true`).
-- `exclude_chars` (string): Characters to exclude from the password (e.g., "0lI" to exclude `0`, `l`, and `I`).
-- `use_secure` (boolean): Use the secure `secrets` module for password generation (`true` or `false`; default: `true`).
-- `num_passwords` (integer): Generate multiple passwords at once (optional).
+---
 
-## Command Line Arguments:
+## 🚀 Features
 
-### Examples
+- Generate one or multiple passwords at once
+- Customize password length
+- Exclude specific characters (e.g., symbols or similar characters)
+- Optional use of the `secrets` module for cryptographic-grade security
+- Save passwords to a file of your choice
+- Easy CLI interface with argparse
+
+---
+
+## ⚙️ Usage
+
+```bash
+python password-generator.py [OPTIONS]
+```
+Available Options : 
+Argument	Description
+--length	Length of the password(s) (default: 12)
+--count	Number of passwords to generate (default: 1)
+--exclude	Characters to exclude (e.g. @#%lIO0)
+--secure	Use the secrets module for strong cryptographic randomness
+--save	Save generated passwords to a file (e.g., output.txt)
+-h, --help	Display the help message
+
+## Examples
 Default (12 characters, with digits and special characters):
 
 ```bash
@@ -39,18 +50,25 @@ File: The generated password will be saved in generated_password.txt.
 ```
 
 ## Example Output:
+Generate a single 12-character password:
+
 ```bash
-Generated password: Y5$3Gd1!Kl9P
-The password will also be written to the file generated_password.txt.
+python password-generator.py
+Generate 5 passwords of length 20:
 ```
-## ⚙️ Customization
-The script can be easily modified to:
 
-Change the default password length.
+```bash
+python password-generator.py --length 20 --count 5
+Generate secure passwords and save them to a file:
+```
+```bash
+python password-generator.py --secure --count 3 --save passwords.txt
+Exclude confusing characters like O, 0, l, and 1:
+```
 
-Adjust which character sets are included (e.g., including/excluding specific special characters).
-
-Add more features such as custom character sets or multiple password generation at once.
+```bash
+python password-generator.py --exclude "O0l1" --count 2
+```
 
 ## 🚀 Installation
 Clone this repository:
@@ -66,6 +84,17 @@ Run the script using Python:
 ```bash
 python password-generator.py
 ```
+
+## 🔒 Security Considerations
+Using the --secure flag activates the secrets module, which provides cryptographically secure random generation.
+
+If you're generating passwords for real users or production systems, it's highly recommended to use --secure.
+
+## 📁 Requirements
+Python 3.6 or higher
+
+No external libraries required (only built-in modules)
+
 ## 🛠️ Dependencies
 This script is written in Python and uses the built-in random, string, and sys modules, so no additional dependencies are required.
 
