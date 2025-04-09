@@ -72,11 +72,10 @@ Clone this repository:
 
 ```bash
 git clone https://github.com/yourusername/password-generator.git
-Navigate to the project directory:
 
+Navigate to the project directory:
 cd password-generator
 Run the script using Python:
-
 python password-generator.py
 ```
 
