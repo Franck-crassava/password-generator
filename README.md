@@ -100,3 +100,6 @@ This script is written in Python and uses the built-in random, string, and sys m
 
 ## 📜 License
 This project is licensed under the MIT License.
+
+## ✨ Author
+Franck CRASSAVA – Cybersecurity & Network Architecture Student
